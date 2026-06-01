@@ -1,0 +1,32 @@
+
+> frontend@0.0.0 build
+> tsc -b && vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+Error: Cannot apply unknown utility class `bg-nature-50`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    at onInvalidCandidate (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:21:1314)
+    at Te (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:16:36652)
+    at D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:21:355
+    at Rr (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:3:1718)
+    at _ (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:3:1377)
+    at $e (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:21:172)
+    at un (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:38:294)
+    at async cn (D:\Advait251206\Extra\Ecothon\frontend\node_modules\tailwindcss\dist\lib.js:38:631)
+    at async Xr (D:\Advait251206\Extra\Ecothon\frontend\node_modules\@tailwindcss\node\dist\index.js:10:3417)
+    at async I (D:\Advait251206\Extra\Ecothon\frontend\node_modules\@tailwindcss\postcss\dist\index.js:10:3977)
+[32mΓ£ô[39m 107 modules transformed.
+Γ£ù Build failed in 839ms
+error during build:
+[vite:css] [postcss] tailwindcss: D:/Advait251206/Extra/Ecothon/frontend/src/index.css:1:1: Cannot apply unknown utility class `bg-nature-50`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+file: D:/Advait251206/Extra/Ecothon/frontend/src/index.css:1:0
+    at Input.error (D:\Advait251206\Extra\Ecothon\frontend\node_modules\postcss\lib\input.js:135:16)
+    at Root.error (D:\Advait251206\Extra\Ecothon\frontend\node_modules\postcss\lib\node.js:146:32)
+    at Object.Once (D:\Advait251206\Extra\Ecothon\frontend\node_modules\@tailwindcss\postcss\dist\index.js:10:6911)
+    at async LazyResult.runAsync (D:\Advait251206\Extra\Ecothon\frontend\node_modules\postcss\lib\lazy-result.js:293:11)
+    at async runPostCSS (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/vite/dist/node/chunks/config.js:30145:19)
+    at async compilePostCSS (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/vite/dist/node/chunks/config.js:30129:6)
+    at async compileCSS (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/vite/dist/node/chunks/config.js:30059:26)
+    at async Object.handler (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/vite/dist/node/chunks/config.js:29592:54)
+    at async transform (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/rollup/dist/es/shared/node-entry.js:21239:16)
+    at async ModuleLoader.addModuleSource (file:///D:/Advait251206/Extra/Ecothon/frontend/node_modules/rollup/dist/es/shared/node-entry.js:21453:36)

@@ -1,0 +1,36 @@
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+
+  :root {
+    --font-outfit: 'Outfit', sans-serif;
+  }
+  
+  html {
+    font-family: var(--font-outfit);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-nature-50 text-nature-900 overflow-x-hidden antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/50 shadow-xl;
+  }
+  
+  .glass-panel {
+    @apply bg-nature-900/10 backdrop-blur-md border border-nature-900/5;
+  }
+  
+  .glass-popup .leaflet-popup-content-wrapper {
+    @apply bg-white/90 backdrop-blur-md rounded-xl p-0 overflow-hidden shadow-xl;
+  }
+  .glass-popup .leaflet-popup-tip {
+    @apply bg-white/90 backdrop-blur-md;
+  }
+}

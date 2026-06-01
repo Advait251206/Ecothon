@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-outfit: 'Outfit', sans-serif;
+  }
+  
+  html {
+    font-family: var(--font-outfit);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-nature-50 text-nature-900 overflow-x-hidden antialiased selection:bg-nature-200 selection:text-nature-900;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl;
+  }
+  
+  .glass-panel {
+    @apply bg-nature-900/5 backdrop-blur-md border border-nature-900/5;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-nature-700 to-nature-500;
+  }
+}
