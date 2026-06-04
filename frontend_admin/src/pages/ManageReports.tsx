@@ -30,7 +30,7 @@ const ManageReports = () => {
   }, []);
 
   const fetchReports = async () => {
-    const res = await fetch('http://localhost:5000/api/reports');
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reports`);
     const data = await res.json();
     if (data.success) {
         setReports(data.data.map((r: any) => ({
@@ -50,8 +50,8 @@ const ManageReports = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const url = editingId 
-      ? `http://localhost:5000/api/reports/${editingId}`
-      : 'http://localhost:5000/api/reports';
+      ? `${import.meta.env.VITE_API_URL}/api/reports/${editingId}`
+      : `${import.meta.env.VITE_API_URL}/api/reports`;
     
     const method = editingId ? 'PUT' : 'POST';
 
@@ -70,7 +70,7 @@ const ManageReports = () => {
 
   const handleStatusUpdate = async (id: string, newStatus: string) => {
     try {
-        await fetch(`http://localhost:5000/api/reports/${id}`, {
+        await fetch(`${import.meta.env.VITE_API_URL}/api/reports/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ status: newStatus })
@@ -83,7 +83,7 @@ const ManageReports = () => {
 
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this report?')) {
-      await fetch(`http://localhost:5000/api/reports/${id}`, { method: 'DELETE' });
+      await fetch(`${import.meta.env.VITE_API_URL}/api/reports/${id}`, { method: 'DELETE' });
       fetchReports();
     }
   };

@@ -35,7 +35,7 @@ export const ReportList: React.FC = () => {
 
   const fetchReports = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/reports');
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/reports`);
       const data = await res.json();
       if (data.success) {
         setReports(data.data);
